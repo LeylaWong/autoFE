@@ -1,4 +1,4 @@
-from autofe import AutoFE
+from autofe import autofe
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_breast_cancer
@@ -8,7 +8,7 @@ def load_data():
 
     breast_cancer_data = pd.DataFrame(breast_cancer_bunch.data,columns=breast_cancer_bunch.feature_names)
     breast_cancer_target = pd.DataFrame(breast_cancer_bunch.target,columns=['target'])
-    feature_cols = breast_cancer_bunch.feature_names
+    feature_cols = breast_cancer_bunch.feature_names.tolist()
     breast_cancer_data['id'] = [i for i in range(len(breast_cancer_data))]
     x_train, x_test, y_train, y_test = train_test_split(breast_cancer_data, breast_cancer_target, test_size=0.3, random_state=0)
     return x_train, x_test, y_train, y_test, feature_cols
@@ -16,7 +16,9 @@ def load_data():
 
 if __name__=='__main__':
 
-    afe = AutoFE('id', feature_cols, k1=5, k2=5)
+    x_train, x_test, y_train, y_test, feature_cols = load_data()
+
+    afe = autofe.AutoFE('id', feature_cols, k1=5, k2=5)
 
     afe.fit(x_train, y_train)
 

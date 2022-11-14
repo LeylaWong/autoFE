@@ -278,7 +278,7 @@ class AutoFE(BaseEstimator, TransformerMixin):
 
         data = self.rowToCol(df)
         cols = [col for col in data.columns if col not in [self.primary_key,'flag','label']]
-        cols_ = feature_cols
+        cols_ = self.feature_cols
         testSample = data[cols+[self.primary_key,'flag','label']]
 
         originalset = cols
