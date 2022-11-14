@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="auto-feature-engine", 
+    name="auto-feature-engineering", 
     version="0.0.1",
     author="Xinlin Wang",
     author_email="xinlin.wang.stats@gmail.com",
