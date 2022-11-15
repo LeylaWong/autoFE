@@ -8,6 +8,13 @@ setuptools.setup(
     version="0.0.1",
     author="Xinlin Wang",
     author_email="xinlin.wang.stats@gmail.com",
+    install_requires=[
+    'pandas==1.3.5',
+    'numpy==1.20.0',
+    'lightgbm==3.3.2',
+    'scikit-learn==1.0.1',
+    'multiprocess==0.70.14'
+    ]
     description="A package for automatically generating features",
     long_description=long_description,
     long_description_content_type="text/markdown",#
