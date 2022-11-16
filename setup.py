@@ -14,7 +14,7 @@ setuptools.setup(
     'lightgbm==3.3.2',
     'scikit-learn==1.0.1',
     'multiprocess==0.70.14'
-    ]
+    ],
     description="A package for automatically generating features",
     long_description=long_description,
     long_description_content_type="text/markdown",#
