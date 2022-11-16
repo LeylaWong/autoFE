@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="auto-feature-engineering", 
-    version="0.0.1",
+    version="0.0.2",
     author="Xinlin Wang",
     author_email="xinlin.wang.stats@gmail.com",
     install_requires=[
